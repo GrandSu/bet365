@@ -15,6 +15,8 @@
 		5703B5D9211D716F00E20505 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5D8211D716F00E20505 /* main.m */; };
 		5703B5E3211D716F00E20505 /* bet365Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5E2211D716F00E20505 /* bet365Tests.m */; };
 		5703B5EE211D716F00E20505 /* bet365UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5ED211D716F00E20505 /* bet365UITests.m */; };
+		5703B600211D73A100E20505 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5FF211D73A100E20505 /* MainViewController.m */; };
+		6F78372FE07EE377B6B4229F /* libPods-bet365.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 672227108C50FBD2B5E0071A /* libPods-bet365.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20B49B78AAEA2AA1AD3102C3 /* Pods-bet365.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bet365.release.xcconfig"; path = "Pods/Target Support Files/Pods-bet365/Pods-bet365.release.xcconfig"; sourceTree = "<group>"; };
 		5703B5C6211D716C00E20505 /* bet365.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bet365.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5703B5C9211D716C00E20505 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5703B5CA211D716C00E20505 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +54,11 @@
 		5703B5E9211D716F00E20505 /* bet365UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bet365UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5703B5ED211D716F00E20505 /* bet365UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bet365UITests.m; sourceTree = "<group>"; };
 		5703B5EF211D716F00E20505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5703B5FD211D736300E20505 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		5703B5FE211D73A100E20505 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5703B5FF211D73A100E20505 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		672227108C50FBD2B5E0071A /* libPods-bet365.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bet365.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		958E03E6BABF0410B0F69625 /* Pods-bet365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bet365.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bet365/Pods-bet365.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F78372FE07EE377B6B4229F /* libPods-bet365.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3988E49105CF1057E89BB381 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				672227108C50FBD2B5E0071A /* libPods-bet365.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5703B5BD211D716C00E20505 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +102,8 @@
 				5703B5E1211D716F00E20505 /* bet365Tests */,
 				5703B5EC211D716F00E20505 /* bet365UITests */,
 				5703B5C7211D716C00E20505 /* Products */,
+				DA2AFFEA8C0FA37BB3240EFA /* Pods */,
+				3988E49105CF1057E89BB381 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,6 +120,8 @@
 		5703B5C8211D716C00E20505 /* bet365 */ = {
 			isa = PBXGroup;
 			children = (
+				5703B5FB211D732C00E20505 /* Class */,
+				5703B5FC211D733500E20505 /* Controller */,
 				5703B5C9211D716C00E20505 /* AppDelegate.h */,
 				5703B5CA211D716C00E20505 /* AppDelegate.m */,
 				5703B5CC211D716C00E20505 /* ViewController.h */,
@@ -132,6 +153,32 @@
 			path = bet365UITests;
 			sourceTree = "<group>";
 		};
+		5703B5FB211D732C00E20505 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				5703B5FD211D736300E20505 /* PrefixHeader.pch */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		5703B5FC211D733500E20505 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5703B5FE211D73A100E20505 /* MainViewController.h */,
+				5703B5FF211D73A100E20505 /* MainViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DA2AFFEA8C0FA37BB3240EFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				958E03E6BABF0410B0F69625 /* Pods-bet365.debug.xcconfig */,
+				20B49B78AAEA2AA1AD3102C3 /* Pods-bet365.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,6 +186,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5703B5F2211D716F00E20505 /* Build configuration list for PBXNativeTarget "bet365" */;
 			buildPhases = (
+				0527DAB876CF3BB4EEBF01E0 /* [CP] Check Pods Manifest.lock */,
 				5703B5C2211D716C00E20505 /* Sources */,
 				5703B5C3211D716C00E20505 /* Frameworks */,
 				5703B5C4211D716C00E20505 /* Resources */,
@@ -257,6 +305,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0527DAB876CF3BB4EEBF01E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bet365-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5703B5C2211D716C00E20505 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -265,6 +334,7 @@
 				5703B5CE211D716C00E20505 /* ViewController.m in Sources */,
 				5703B5D9211D716F00E20505 /* main.m in Sources */,
 				5703B5CB211D716C00E20505 /* AppDelegate.m in Sources */,
+				5703B600211D73A100E20505 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,34 +501,46 @@
 		};
 		5703B5F3211D716F00E20505 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 958E03E6BABF0410B0F69625 /* Pods-bet365.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR88D8K8NM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/bet365/Class/PrefixHeader.pch";
 				INFOPLIST_FILE = bet365/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Bet365.bet365;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bet365app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		5703B5F4211D716F00E20505 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20B49B78AAEA2AA1AD3102C3 /* Pods-bet365.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UR88D8K8NM;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/bet365/Class/PrefixHeader.pch";
 				INFOPLIST_FILE = bet365/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.Bet365.bet365;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bet365app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
