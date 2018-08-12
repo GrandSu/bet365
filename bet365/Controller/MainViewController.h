@@ -10,6 +10,8 @@
 
 @interface MainViewController : UIViewController <WKUIDelegate, WKNavigationDelegate>
 @property (nonatomic, strong) WKWebView *webView;
-@property (nonatomic, strong) NSString *currentUrl;
+@property (nonatomic, copy) NSString *currenWeb_Url;  // 当前网站
+@property (nonatomic, copy) NSString *baseWeb_Url;
+@property (nonatomic, strong) NSMutableArray *urlMuArray;
 
 @end

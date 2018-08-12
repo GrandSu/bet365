@@ -17,8 +17,16 @@
 #define mainWebViewFrame CGRectMake(0, 20, screenW, screenH -20)  // webView大小
 #define progressViewFrame CGRectMake(0, 20, screenW, 20)
 
+#define baseURL_bet365 @"http://fuwujc.com/bet365.json"
+#define BseeUrl_bet36 @"http://fuwujc.com/bet36.json"
+
+#define Base_URL @"https://www.bet878365.cc"
+#define Host_http @"http://%@/"
+#define Host_https @"https://%@/"
+
 #import <WebKit/WebKit.h>
 #import <AFNetworking.h>
+#import <SVProgressHUD.h>
 
 
 

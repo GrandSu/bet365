@@ -28,7 +28,7 @@ static BOOL statusAlert = NO;  // 第一次连接有网络时不弹出提示
     // Override point for customization after application launch.
     
     // 使用 AFNetworkReachabilityManager 监听网络状况，并在没有网络的时候提醒
-    [self listenNetworkReachabilityStatus];
+//    [self listenNetworkReachabilityStatus];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setRootViewController:self.mainVC];
