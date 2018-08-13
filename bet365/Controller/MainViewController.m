@@ -26,8 +26,6 @@
         // 是否可以不通过用户交互打开窗口
         config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
         
-        
-        
         _webView = [[WKWebView alloc] initWithFrame:mainWebViewFrame configuration:config];
         
         // 代理
@@ -66,7 +64,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     [self webViewLoadRequestWithUrl:Base_URL];
+    
+    [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+    
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    
+    if ([keyPath isEqualToString:@"estimatedProgress"]) {
+        NSLog(@"加载：%f", self.webView.estimatedProgress);
+    }
     
 }
 
@@ -105,17 +115,35 @@
 
 /** 在发送请求之前，决定是否跳转 */
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
-//    NSLog(@"发送请求前,决定是否跳转");
-    NSLog(@"发送请求前加载：%@/n", [navigationAction.request valueForKey:@"URL"]);
+    NSLog(@"发送请求前,决定是否跳转");
     
-    // 确认可以跳转
+    // ------  对scheme:相关的scheme处理 -------
+    // 若遇到微信、支付宝、QQ支付等相关scheme，则跳转到本地App
+    NSString *scheme = navigationAction.request.URL.scheme;
+    
+    // 判断scheme是否是 http或者https，并返回BOOL的值
+    BOOL urlOpen = [scheme isEqualToString:@"https"] || [scheme isEqualToString:@"http"];
+    
+    if (!urlOpen) {
+        // 跳转相关客户端
+        BOOL bSucc = [[UIApplication sharedApplication]openURL:navigationAction.request.URL];
+        
+        // 如果跳转失败，则弹窗提示客户
+        if (!bSucc) {
+            // 设置弹窗
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"未检测到该客户端，请您安装后重试。" preferredStyle:UIAlertControllerStyleAlert];
+            // 确定按键不带点击事件
+            [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }
+    }
+    // 确认可以跳转，必须实现该方法，不实现会报错
     decisionHandler(WKNavigationActionPolicyAllow);
 }
 
 /** 在收到响应后，决定是否跳转 */
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationResponse:(WKNavigationResponse *)navigationResponse decisionHandler:(void (^)(WKNavigationResponsePolicy))decisionHandler {
-//    NSLog(@"在收到响应后，决定是否跳转");
-    NSLog(@"在收到响应后加载：%@/n", navigationResponse.response.URL);
+    NSLog(@"在收到响应后，决定是否跳转");
     
     // 确认可以跳转
     decisionHandler(WKNavigationResponsePolicyAllow);
@@ -123,8 +151,7 @@
 
 /** 收到服务器重定向之后调用（接收到服务器跳转请求）*/
 - (void)webView:(WKWebView *)webView didReceiveServerRedirectForProvisionalNavigation:(null_unspecified WKNavigation *)navigation {
-//    NSLog(@"接收到服务器跳转请求");
-    NSLog(@"接收到服务器跳转请求:%@/n", webView.URL);
+    NSLog(@"接收到服务器跳转请求");
 }
 
 /** 证书验证处理 https 可以自签名 */
