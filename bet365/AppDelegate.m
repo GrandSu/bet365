@@ -28,13 +28,10 @@ static BOOL statusAlert = NO;  // 第一次连接有网络时不弹出提示
     // Override point for customization after application launch.
     
     // 使用 AFNetworkReachabilityManager 监听网络状况，并在没有网络的时候提醒
-//    [self listenNetworkReachabilityStatus];
+    [self listenNetworkReachabilityStatus];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     [self.window setRootViewController:self.mainVC];
-    
-    // 让当前 UIWindow 窗口变成 keyWiindow (主窗口)
-//    [self.window makeKeyWindow];
     
     // 让当前 UIWindow 窗口变成 keyWiindow (主窗口)，并显示出来
     [self.window makeKeyAndVisible];
@@ -87,6 +84,16 @@ static BOOL statusAlert = NO;  // 第一次连接有网络时不弹出提示
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"温馨提示" message:note preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         
+        NSLog(@"webTitle:%@", self.mainVC.webView.title);
+        if (!statusAlert) {
+            
+            if (self.mainVC.webView.title) {
+                [self.mainVC.webView reloadFromOrigin];
+            }else {
+                [self.mainVC webViewLoadRequest];
+            }
+            
+        }
         
     }];
     
@@ -94,7 +101,6 @@ static BOOL statusAlert = NO;  // 第一次连接有网络时不弹出提示
     
     [self.window.rootViewController presentViewController:alertController animated:YES completion:nil];
 }
-
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

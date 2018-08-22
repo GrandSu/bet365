@@ -16,6 +16,8 @@
 		5703B5E3211D716F00E20505 /* bet365Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5E2211D716F00E20505 /* bet365Tests.m */; };
 		5703B5EE211D716F00E20505 /* bet365UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5ED211D716F00E20505 /* bet365UITests.m */; };
 		5703B600211D73A100E20505 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5703B5FF211D73A100E20505 /* MainViewController.m */; };
+		571AFC78212D86C9004FA5B1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 571AFC77212D86C9004FA5B1 /* Info.plist */; };
+		571AFCA2212D88B9004FA5B1 /* WebModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 571AFCA0212D88B8004FA5B1 /* WebModel.m */; };
 		6F78372FE07EE377B6B4229F /* libPods-bet365.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 672227108C50FBD2B5E0071A /* libPods-bet365.a */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +48,6 @@
 		5703B5D0211D716C00E20505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5703B5D2211D716E00E20505 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5703B5D5211D716E00E20505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5703B5D7211D716F00E20505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5703B5D8211D716F00E20505 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5703B5DE211D716F00E20505 /* bet365Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bet365Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5703B5E2211D716F00E20505 /* bet365Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bet365Tests.m; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		5703B5FD211D736300E20505 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		5703B5FE211D73A100E20505 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		5703B5FF211D73A100E20505 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		571AFC77212D86C9004FA5B1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		571AFCA0212D88B8004FA5B1 /* WebModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebModel.m; sourceTree = "<group>"; };
+		571AFCA1212D88B9004FA5B1 /* WebModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebModel.h; sourceTree = "<group>"; };
 		672227108C50FBD2B5E0071A /* libPods-bet365.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bet365.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		958E03E6BABF0410B0F69625 /* Pods-bet365.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bet365.debug.xcconfig"; path = "Pods/Target Support Files/Pods-bet365/Pods-bet365.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,9 +131,9 @@
 				5703B5CC211D716C00E20505 /* ViewController.h */,
 				5703B5CD211D716C00E20505 /* ViewController.m */,
 				5703B5CF211D716C00E20505 /* Main.storyboard */,
+				571AFC77212D86C9004FA5B1 /* Info.plist */,
 				5703B5D2211D716E00E20505 /* Assets.xcassets */,
 				5703B5D4211D716E00E20505 /* LaunchScreen.storyboard */,
-				5703B5D7211D716F00E20505 /* Info.plist */,
 				5703B5D8211D716F00E20505 /* main.m */,
 			);
 			path = bet365;
@@ -157,6 +161,8 @@
 			isa = PBXGroup;
 			children = (
 				5703B5FD211D736300E20505 /* PrefixHeader.pch */,
+				571AFCA1212D88B9004FA5B1 /* WebModel.h */,
+				571AFCA0212D88B8004FA5B1 /* WebModel.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				571AFC78212D86C9004FA5B1 /* Info.plist in Resources */,
 				5703B5D6211D716E00E20505 /* LaunchScreen.storyboard in Resources */,
 				5703B5D3211D716E00E20505 /* Assets.xcassets in Resources */,
 				5703B5D1211D716C00E20505 /* Main.storyboard in Resources */,
@@ -352,6 +359,7 @@
 			files = (
 				5703B5CE211D716C00E20505 /* ViewController.m in Sources */,
 				5703B5D9211D716F00E20505 /* main.m in Sources */,
+				571AFCA2212D88B9004FA5B1 /* WebModel.m in Sources */,
 				5703B5CB211D716C00E20505 /* AppDelegate.m in Sources */,
 				5703B600211D73A100E20505 /* MainViewController.m in Sources */,
 			);

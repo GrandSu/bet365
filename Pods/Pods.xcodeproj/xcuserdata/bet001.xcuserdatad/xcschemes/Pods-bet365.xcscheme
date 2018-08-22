@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "42D539148596AE5835E29FD1746F611E"
+               BlueprintIdentifier = "D2689E17879A6E41F5792719276BFD79"
                BlueprintName = "Pods-bet365"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-bet365.a">

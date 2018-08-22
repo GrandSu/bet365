@@ -14,19 +14,20 @@
 
 #define screenW [UIScreen mainScreen].bounds.size.width  // 屏幕宽度
 #define screenH [UIScreen mainScreen].bounds.size.height  // 屏幕高度
-#define mainWebViewFrame CGRectMake(0, 20, screenW, screenH -20)  // webView大小
-#define progressViewFrame CGRectMake(0, 20, screenW, 20)
 
-#define baseURL_bet365 @"http://fuwujc.com/bet365.json"
-#define BseeUrl_bet36 @"http://fuwujc.com/bet36.json"
+#define IS_IPHONE_X ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define statusBarHeight (IS_IPHONE_X ? 44.0f : 20.0f)
 
-#define Base_URL @"https://www.bet878365.cc"
-#define Host_http @"http://%@/"
-#define Host_https @"https://%@/"
+#define BaseURL_bet365 @"http://fuwujc.com/bet365.json"
+#define BaseURL_bet36 @"http://fuwujc.com/bet36.json"
+
+#define Base_URL @"https://www.878365app.com"
 
 #import <WebKit/WebKit.h>
 #import <AFNetworking.h>
+#import <Masonry.h>
 #import <SVProgressHUD.h>
+#import "WebModel.h"
 
 
 
