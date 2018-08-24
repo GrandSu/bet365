@@ -29,6 +29,62 @@
 	<string>LaunchScreen</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>lightsky</string>
+		<string>shark.video</string>
+		<string>bobo</string>
+		<string>snssdk32</string>
+		<string>pptv</string>
+		<string>bilibili</string>
+		<string>kugouURL</string>
+		<string>gaeagj</string>
+		<string>qqnews</string>
+		<string>zhihu</string>
+		<string>doubanradio</string>
+		<string>openApp.jdMobile</string>
+		<string>imeituan</string>
+		<string>tmall</string>
+		<string>dianping</string>
+		<string>vipshop</string>
+		<string>yanxuan</string>
+		<string>wccbyihaodian</string>
+		<string>taobao</string>
+		<string>suning</string>
+		<string>kaola</string>
+		<string>ctrip</string>
+		<string>kuaikanmanhua</string>
+		<string>gugutouchmanga</string>
+		<string>qrxs</string>
+		<string>mailmaster</string>
+		<string>jcnhers</string>
+		<string>wbmain</string>
+		<string>yixin</string>
+		<string>ydcourse</string>
+		<string>ntesopen</string>
+		<string>yddict</string>
+		<string>shanbay</string>
+		<string>tencentweiboSdkv2</string>
+		<string>weibosdk2.5</string>
+		<string>sinaweibo</string>
+		<string>sinaweibohd</string>
+		<string>alipay</string>
+		<string>safepay</string>
+		<string>cydia</string>
+		<string>weixin</string>
+		<string>wechat</string>
+		<string>weibosdk</string>
+		<string>mqq</string>
+		<string>mqqapi</string>
+		<string>mqzone</string>
+		<string>wtloginmqq2</string>
+		<string>mqqopensdkapiV3</string>
+		<string>mqqwpa</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>hbuilder</string>
+		<string>streamapp</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSCameraUsageDescription - 2</key>
